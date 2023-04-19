@@ -35,7 +35,7 @@ async function getThread(url) {
   })
   if (!res.ok) {
     console.error(await res.status)
-    return new Response('Error')
+    return new Response('HTMLの取得に失敗しました', { status: res.status })
   }
   return res
 }
