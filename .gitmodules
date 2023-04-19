@@ -1,0 +1,3 @@
+[submodule "iconv-lite"]
+	path = iconv-lite
+	url = https://github.com/shinosaki/iconv-lite.git
