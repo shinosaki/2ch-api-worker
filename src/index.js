@@ -22,13 +22,12 @@ export default {
 }
 
 async function getThread(url) {
-  const path = url.pathname;
-  // const regex = /^\s*$|test|read\.cgi/g;
-  const regex = /^\s*$|[a-z]+\/[0-9]+\.dat/g
-  const arr = path.split('/').filter(p => !p.match(regex));
+  const path = url.pathname
+    .split(/[\/\.]/)
+    .filter(x => !x.match(/^\s*$|^dat$/));
 
-  const board = arr[0];
-  const tid = arr[1];
+  const board = path[0];
+  const tid = path[1];
 
   const ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0';
   const res = await fetch(`https://5ch.net/${board}/${tid}/`, {
