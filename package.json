@@ -10,6 +10,7 @@
     "deploy": "wrangler publish"
   },
   "dependencies": {
+    "iconv-lite": "^0.6.3",
     "linkedom": "^0.14.25"
   }
 }
