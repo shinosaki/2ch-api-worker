@@ -12,6 +12,11 @@
 応答はShift-JISでエンコードされた[2chのdat](https://info.5ch.net/index.php/Monazilla/develop/dat)です。
 
 ### chMateの設定
+[設定]→[実験的]→[検索に使うURL(追加用)]にコレを入力  
+```
+過去ログ https://2ch.lain.im/test/read.cgi/{$bbs}/{$key}/
+```
+
 ### JDimの設定
 ### Sikiの設定
 
