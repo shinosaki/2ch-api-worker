@@ -12,7 +12,7 @@ export default {
 
     if (body.includes('Good bye 011')) {
       console.error(`Error: status code ${res.status}`)
-      return new Response('HTMLの取得に失敗しました', { status: 404 })
+      return new Response('HTMLの取得に失敗しました\n使い方は https://github.com/shinosaki/2ch-api-worker/',{ status: 404 })
     }
 
     const {document} = parseHTML(body);
