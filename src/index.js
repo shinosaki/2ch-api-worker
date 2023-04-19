@@ -10,6 +10,11 @@ export default {
     const decoder = new TextDecoder('sjis');
     const body = decoder.decode(ab);
 
+    if (body.includes('Good bye 011')) {
+      console.error(`Error: status code ${res.status}`)
+      return new Response('HTMLの取得に失敗しました', { status: res.status })
+    }
+
     const {document} = parseHTML(body);
     const dat = parseThread(document);
 
@@ -24,7 +29,7 @@ export default {
 async function getThread(url) {
   const path = url.pathname
     .split(/[\/\.]/)
-    .filter(x => !x.match(/^\s*|dat|test|read|cgi$/));
+    .filter(x => !x.match(/^\s*$|dat|test|read|cgi/));
 
   const board = path[0];
   const tid = path[1];
@@ -33,14 +38,11 @@ async function getThread(url) {
   const res = await fetch(`https://5ch.net/${board}/${tid}/`, {
     headers: { 'user-agent': ua }
   })
-  if (!res.ok) {
-    console.error(await res.status)
-    return new Response('HTMLの取得に失敗しました', { status: res.status })
-  }
+
   return res
 }
 
-async function parseThread(document) {
+function parseThread(document) {
   let title = document.querySelector('.title').textContent;
   const posts = document.querySelectorAll('.thread .post');
   const result = Array.from(posts).map((post, index) => {
@@ -63,3 +65,4 @@ async function parseThread(document) {
   }).join('\n');
   return result;
 }
+
