@@ -24,7 +24,7 @@ export default {
 async function getThread(url) {
   const path = url.pathname
     .split(/[\/\.]/)
-    .filter(x => !x.match(/^\s*$|^dat$/));
+    .filter(x => !x.match(/^\s*|dat|test|read|cgi$/));
 
   const board = path[0];
   const tid = path[1];
