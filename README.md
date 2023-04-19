@@ -2,8 +2,8 @@
 2ch-api-workerは[2chproxy.pl](https://github.com/yama-natuki/2chproxy.pl)にインスパイアされたプロジェクトで、2chのread.cgiが生成するHTMLをdat形式に変換するCloudflare Workersアプリケーションです。
 
 ## ToDo
-- [] read.cgi ver 05系に対応
-- [] サーバー移転の追従
+- [ ] read.cgi ver 05系に対応
+- [ ] サーバー移転の追従
   例えば`https://5ch.net/poverty/1633076823/`にアクセスした場合`https://leia.5ch.net/test/read.cgi/poverty/1633076823/`ではなく`https://greta.5ch.net/test/read.cgi/poverty/1633076823/`にリダイレクトされて「datが存在しません。削除されたかURL間違ってますよ。」と返ってくる。
 
 ## 使用方法
