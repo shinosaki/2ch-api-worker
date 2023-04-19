@@ -3,11 +3,11 @@
 
 ## ToDo
 - [ ] read.cgi ver 05系に対応
-- [ ] サーバー移転の追従
+- [ ] サーバー移転の追従  
   例えば`https://5ch.net/poverty/1633076823/`にアクセスした場合`https://leia.5ch.net/test/read.cgi/poverty/1633076823/`ではなく`https://greta.5ch.net/test/read.cgi/poverty/1633076823/`にリダイレクトされて「datが存在しません。削除されたかURL間違ってますよ。」と返ってくる。
 
 ## 使用方法
-2chのスレ(`https://greta.5ch.net/test/read.cgi/poverty/1653843928/`)のドメイン名部分(`greta.5ch.net`)をWorkerのドメイン名(`2ch.lain.im`)に置き換えてアクセスするだけです。
+2chのdat(`https://greta.5ch.net/poverty/dat/1653843928/`)のドメイン名部分(`greta.5ch.net`)をWorkerのドメイン名(`2ch.lain.im`)に置き換えてアクセスするだけです。
 
 応答はShift-JISでエンコードされた[2chのdat](https://info.5ch.net/index.php/Monazilla/develop/dat)です。
 
@@ -17,5 +17,5 @@
 
 ## 制限
 - 書き込みには対応してないよ！
-- 国外IPアドレスからのアクセスは[451 Unavailable For Legal Reasons](https://ja.wikipedia.org/wiki/HTTP_451)で弾かれるみたい![ムカつく](https://cdn.discordapp.com/emojis/498186332066152459.png?size=64)
+- 国外IPアドレスからのアクセスは[451 Unavailable For Legal Reasons](https://ja.wikipedia.org/wiki/HTTP_451)で弾かれるみたい![ムカつく](https://cdn.discordapp.com/emojis/498186332066152459.png?size=16)  
   *正確に言うとクライアントから最も近いCloudflareエッジサーバー経由でアクセスしてる*
