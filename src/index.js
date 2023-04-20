@@ -43,7 +43,7 @@ async function getThread(url) {
 }
 
 function parseThread(document) {
-  let title = document.querySelector('.title').textContent;
+  let title = document.querySelector('.title').textContent.replace('\n', '');
   const posts = document.querySelectorAll('.thread .post');
   const result = Array.from(posts).map((post, index) => {
     const get = selector => post.querySelector(selector);
