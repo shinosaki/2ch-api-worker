@@ -5,7 +5,7 @@
 2ch-api-workerは2ちゃんねる(5ちゃんねる)のHTMLをdat形式に変換するCloudflare Workersアプリケーションです。
 
 ## ToDo
-- [] linkedomからHTMLRewriterに移行
+- [ ] linkedomからHTMLRewriterに移行
 <!-- - [ ] read.cgi ver 05系に対応 -->
 - [ ] サーバー移転の追従  
   <!-- 例えば`https://5ch.net/poverty/1633076823/`にアクセスした場合`https://leia.5ch.net/test/read.cgi/poverty/1633076823/`ではなく`https://greta.5ch.net/test/read.cgi/poverty/1633076823/`にリダイレクトされて「datが存在しません。削除されたかURL間違ってますよ。」と返ってくる。 -->
@@ -16,7 +16,7 @@
 下記のいずれか(read.cgi or dat)のURL形式に対応してます。
 
 - `https://2ch.lain.im/test/read.cgi/<板/board>/<スレッドID/Thread ID>`
-- `https://2ch.lain.im/<板/board>/dat/<スレッドID/Thread ID>`
+- `https://2ch.lain.im/<板/board>/dat/<スレッドID/Thread ID>.dat`
 
 応答はShift-JISでエンコードされた[2chのdat](https://info.5ch.net/index.php/Monazilla/develop/dat)です。  
 
