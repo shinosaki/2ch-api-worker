@@ -1,4 +1,4 @@
-import iconv from '../iconv-lite/lib/index.js';
+import iconv from '@shinosaki/iconv-lite';
 
 const getServerName = async (board, tid) => {
   const data = {
