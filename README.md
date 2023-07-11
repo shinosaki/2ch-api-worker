@@ -33,13 +33,14 @@ URL末尾にクエリパラメータ`?charset=utf-8`を追加するとUTF-8に�
 - 国外IPアドレスからのアクセスは[451 Unavailable For Legal Reasons](https://ja.wikipedia.org/wiki/HTTP_451)で弾かれるみたい
 
 ## Deploy
-[Deploy Button](https://deploy.workers.cloudflare.com/?url=https://github.com/shinosaki/2ch-api-worker) or
+<!-- [Deploy Button](https://deploy.workers.cloudflare.com/?url=https://github.com/shinosaki/2ch-api-worker) or -->
 
-1. `git clone --recursive https://github.com/shinosaki/2ch-api-worker.git`
+1. `git clone https://github.com/shinosaki/2ch-api-worker.git`
 2. `cd 2ch-api-worker`
-3. `npm i`
+3. `npm install`
 4. `npx wrangler login`
-5. `npm run deploy`
+5. Edit `wrangler.toml`
+6. `npm run deploy`
 
 ## License
 [MIT](https://raw.githubusercontent.com/shinosaki/2ch-api-worker/main/LICENSE)
