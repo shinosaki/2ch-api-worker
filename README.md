@@ -11,12 +11,12 @@
   <!-- 例えば`https://5ch.net/poverty/1633076823/`にアクセスした場合`https://leia.5ch.net/test/read.cgi/poverty/1633076823/`ではなく`https://greta.5ch.net/test/read.cgi/poverty/1633076823/`にリダイレクトされて「datが存在しません。削除されたかURL間違ってますよ。」と返ってくる。 -->
 
 ## 使用方法
-~~2chのURL(`https://greta.5ch.net/test/read.cgi/poverty/1653843928/`)のドメイン名部分(`greta.5ch.net`)をWorkerのドメイン名(`2ch.lain.im`)に置き換えてアクセスするだけです。~~  
+~~2chのURL(`https://greta.5ch.net/test/read.cgi/poverty/1653843928/`)のドメイン名部分(`greta.5ch.net`)をWorkerのドメイン名(`<HostName>`)に置き換えてアクセスするだけです。~~  
 
 下記のいずれか(read.cgi or dat)のURL形式に対応してます。
 
-- `https://2ch.lain.im/test/read.cgi/<板/board>/<スレッドID/Thread ID>`
-- `https://2ch.lain.im/<板/board>/dat/<スレッドID/Thread ID>.dat`
+- `https://<HostName>/test/read.cgi/<板/board>/<スレッドID/Thread ID>`
+- `https://<HostName>/<板/board>/dat/<スレッドID/Thread ID>.dat`
 
 応答はShift-JISでエンコードされた[2chのdat](https://info.5ch.net/index.php/Monazilla/develop/dat)です。  
 
@@ -25,7 +25,7 @@ URL末尾にクエリパラメータ`?charset=utf-8`を追加するとUTF-8に�
 ### chMateの設定
 [設定]→[実験的]→[検索に使うURL(追加用)]にコレを入力  
 ```
-過去ログ https://2ch.lain.im/test/read.cgi/{$bbs}/{$key}/
+過去ログ https://<HostName>/test/read.cgi/{$bbs}/{$key}/
 ```
 
 ## 制限
